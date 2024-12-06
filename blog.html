@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar-left">
+        <a href="#">
+          <img class="web-logo" src="assets/icon_dev.png" alt="web-logo" />
+        </a>
+        <ul class="navbar-links">
+          <li><a href="index.html" class="link">Home</a></li>
+          <li><a href="blog.html" class="link-active">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <a href="contact.html" class="contact-link">Contact Me</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="blog-form">
+        <form onsubmit="addBlog(event)" class="form-container">
+          <h1 class="section-title">Create Post Blog</h1>
+
+          <div class="form-field">
+            <label for="input-blog-title" class="form-label">Title</label>
+            <input
+              id="input-blog-title"
+              name="input-blog-title"
+              class="form-input"
+              type="text"
+              placeholder="enter title here.."
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="input-blog-content">Content</label>
+            <textarea
+              id="input-blog-content"
+              name="input-blog-content"
+              class="form-input"
+              rows="8"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="input-blog-image" class="form-label"
+              >Upload Image</label
+            >
+            <div class="input-blog-image-group">
+              <label for="input-blog-image">
+                <p>Attach File</p>
+                <img src="assets/file.png" class="attachment-image" />
+              </label>
+              <input
+                id="input-blog-image"
+                name="input-blog-image"
+                class="form-input"
+                type="file"
+                hidden
+              />
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button type="submit">Post Blog</button>
+          </div>
+        </form>
+      </section>
+
+      <hr />
+
+      <section class="blog-container">
+        <div id="blogList" class="blog-list">
+          <div class="blog-list-item">
+            <div class="blog-image">
+              <img src="assets/blog-img.png" alt="blog image" />
+            </div>
+            <div class="blog-content">
+              <div class="btn-group">
+                <button class="btn-edit">Edit Post</button>
+                <button class="btn-post">Post Blog</button>
+              </div>
+              <h1>
+                <a href="blog-detail.html" class="block-item-title"
+                  >Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a
+                >
+              </h1>
+              <div class="detail-blog-content">
+                12 Jul 2024 22:30 WIB | Ichlasul Fikri
+              </div>
+              <p class="blog-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempore, eum id, alias magni, provident quo quam ducimus labore
+                aut veritatis molestias. Odit id provident exercitationem
+                incidunt a. Incidunt eaque molestiae consequuntur! Aliquid,
+                libero. Aperiam vitae exercitationem voluptas inventore hic,
+                perferendis facere delectus totam voluptatibus doloremque
+                facilis illum maxime laudantium nisi!
+              </p>
+              <p class="relative-time">5 months ago</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="blog.js"></script>
+  </body>
+</html>
